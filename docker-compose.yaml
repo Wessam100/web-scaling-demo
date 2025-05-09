@@ -37,7 +37,7 @@ services:
         environment:
           - SERVER_PORT=8080
           - SERVER_HOST=0.0.0.0
-          - SERVER_NUMBER=2
+          - SERVER_NUMBER=3
           - REDIS_HOST=redis
           - REDIS_PORT=6379
           - WEATHER_API_URL=https://api.open-meteo.com/v1/forecast
