@@ -21,6 +21,10 @@ const redisClient = createClient({
 
 app.set('view engine', 'pug');
 
+app.get('/health', (req, res) => {
+  res.send('OK');
+});
+
 app.get('/', async (req, res) => {
   const cacheKey = `server${serverNumber}:weatherData`;
   const cachedWeatherData = await redisClient.get(cacheKey);
@@ -86,3 +90,5 @@ async function main() {
 }
 
 main();
+
+
